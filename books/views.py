@@ -1,6 +1,6 @@
 from rest_framework import viewsets
-from .serializers import BookSerializer
-from .models import Book
+from .serializers import BookSerializer, AuthorSerializer, PublisherSerializer
+from .models import Book, Author, Publisher
 
 
 class BookViewSet(viewsets.ModelViewSet):
@@ -9,3 +9,22 @@ class BookViewSet(viewsets.ModelViewSet):
     """
     queryset = Book.objects.all()
     serializer_class = BookSerializer
+
+
+
+# class AuthorViewSet(viewsets.ModelViewSet):
+#     """
+#     API endpoint that allows books to be viewed or edited
+#     """
+#     queryset = Author.objects.all()
+#     serializer_class = AuthorSerializer
+
+
+
+
+# class PublisherViewSet(viewsets.ModelViewSet):
+#     """
+#     API endpoint that allows books to be viewed or edited
+#     """
+#     queryset = Publisher.objects.all()
+#     serializer_class = PublisherSerializer
