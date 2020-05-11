@@ -140,6 +140,9 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 django_heroku.settings(locals())
 
+if os.environ.get('ENVIROMENT') == 'dev':
+    del DATABASES['default']['OPTIONS']['sslmode']
+
 REST_FRAMEWORK = {
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
     'PAGE_SIZE': 10
