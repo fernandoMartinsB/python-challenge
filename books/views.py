@@ -12,19 +12,19 @@ class BookViewSet(viewsets.ModelViewSet):
 
 
 
-# class AuthorViewSet(viewsets.ModelViewSet):
-#     """
-#     API endpoint that allows books to be viewed or edited
-#     """
-#     queryset = Author.objects.all()
-#     serializer_class = AuthorSerializer
+class AuthorViewSet(viewsets.ModelViewSet):
+    """
+    API endpoint that allows author to be viewed or edited
+    """
+    queryset = Author.objects.all()
+    serializer_class = AuthorSerializer
 
 
 
 
-# class PublisherViewSet(viewsets.ModelViewSet):
-#     """
-#     API endpoint that allows books to be viewed or edited
-#     """
-#     queryset = Publisher.objects.all()
-#     serializer_class = PublisherSerializer
+class PublisherViewSet(viewsets.ModelViewSet):
+    """
+    API endpoint that allows publisher to be viewed or edited
+    """
+    queryset = Publisher.objects.all()
+    serializer_class = PublisherSerializer
